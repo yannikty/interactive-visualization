@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Task 12 - Energy source allocation: electricity vs. direct use</title>
+<title>Task 12 - Energy source allocation: electricity vs. non-electricity</title>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
 <style>
   body {
@@ -48,9 +48,9 @@
 </style>
 </head>
 <body>
-  <h1>Where does primary energy go &mdash; power plants or direct use?</h1>
-  <p class="subtitle">Each primary source splits into electricity generation
-     and direct non-electric consumption (heating, transport, industry).
+  <h1>Where does primary energy go &mdash; electricity or not?</h1>
+  <p class="subtitle">Each primary source splits into the part converted to
+     electricity and the remaining, non-electricity primary energy.
      All values in terawatt-hours (TWh).</p>
 
   <div class="controls">
@@ -72,9 +72,10 @@
     electricity output; the lower right node collects the remainder
     (consumption &minus; electricity generated).
     <b>Method:</b> non-fossil primary energy follows OWID's substitution
-    method, so the &ldquo;direct&rdquo; residual of nuclear, hydro, wind and
+    method, so the non-electricity residual of nuclear, hydro, wind and
     solar mostly reflects implied conversion losses rather than true end use;
-    for fossil fuels it also includes power-plant losses.<br>
+    for fossil fuels it bundles genuine direct uses (heating, transport) with
+    power-plant losses.<br>
     <b>Source:</b> Our World in Data &mdash; Energy dataset
     (Energy Institute &middot; Statistical Review of World Energy; Ember).
   </p>
@@ -88,7 +89,7 @@ const ELEC = N, DIRECT = N + 1;       // target node indices
 
 const TARGETS = [
   ["Electricity generation", "#4C72B0"],
-  ["Direct / non-electric use", "#a08465"],
+  ["Non-electricity primary energy", "#a08465"],
 ];
 
 const gd = document.getElementById("chart");
