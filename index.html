@@ -48,10 +48,9 @@
 </style>
 </head>
 <body>
-  <h1>Where does primary energy go &mdash; electricity or not?</h1>
-  <p class="subtitle">Each primary source splits into the part converted to
-     electricity and the remaining, non-electricity primary energy.
-     All values in terawatt-hours (TWh).</p>
+  <h1>Where Primary Energy Goes</h1>
+  <p class="subtitle">Each primary source splits into electricity generation
+     and non-electricity primary energy. All values in terawatt-hours (TWh).</p>
 
   <div class="controls">
     <label for="entityInput">Region / country:</label>
@@ -68,16 +67,13 @@
   <div id="chart"></div>
 
   <p class="footnote">
-    <b>Reading the chart:</b> the upper right node collects every source's
-    electricity output; the lower right node collects the remainder
-    (consumption &minus; electricity generated).
-    <b>Method:</b> non-fossil primary energy follows OWID's substitution
-    method, so the non-electricity residual of nuclear, hydro, wind and
-    solar mostly reflects implied conversion losses rather than true end use;
-    for fossil fuels it bundles genuine direct uses (heating, transport) with
-    power-plant losses.<br>
-    <b>Source:</b> Our World in Data &mdash; Energy dataset
-    (Energy Institute &middot; Statistical Review of World Energy; Ember).
+    Electricity from nuclear, hydro, wind and solar is counted as the amount
+    of fossil fuel it would replace, so it can be compared with coal, oil and
+    gas (OWID's substitution method).<br>
+    <b>Source:</b> Ritchie, H., Rosado, P., &amp; Roser, M. (2023).
+    <i>Energy</i> [Data set]. Our World in Data. Retrieved June 11, 2026,
+    from <a href="https://github.com/owid/energy-data/">https://github.com/owid/energy-data/</a>
+    (based on Energy Institute, Statistical Review of World Energy; Ember).
   </p>
 
 <script>
